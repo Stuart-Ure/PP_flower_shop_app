@@ -9,3 +9,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 from models import Flower, Order
+
+from controllers.flower_controller import flower_blueprint
+
+app.register_blueprint(flower_blueprint)

@@ -1,0 +1,15 @@
+{% extends 'base.jinja' %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+{% for flower in flowers %}
+            <br>
+            <li>
+            <b>Flower Name:</b> {{ flower.flower_name }}<br>
+            <b>Price:</b> {{ flower.flower_price }}<br>
+            <a href="/flower_edit">Edit</a>
+            <br>
+            <br>
+            </li>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.jinja' %}
+{% block content %}
+<h1>{{ title }}</h1>
+
+        <form action="/order_add" method="post">
+
+        <label for="order_name">Order:</label>
+        <input type="text" id="order_name" required name="order_name"> 
+
+        <label for="order_qty">Order qty:</label>
+        <input type="number" id="order_qty" required name="order_qty"> 
+
+        <label for="flower_id">Id of flower:</label>
+        <input type="number" id="flower_id" required name="flower_id"> 
+
+        <label for="date">Order date:</label>
+        <input type="text" id="date" name="date"> 
+        <button type="submit">Add an order</button>
+        </form>
+
+{% endblock %}
